@@ -13,7 +13,8 @@ export const Header = () => {
 
   return (
     <>
-      <div className="container absolute z-10 mb-3 flex items-center gap-6 rounded-b-3xl border-4 border-t-0 border-primary bg-neutral-100/90 px-8 py-6 sm:mx-auto md:p-6 xl:max-w-6xl">
+    <div className="bg-primary w-full h-14"></div>
+      <div className="container absolute z-10 mb-3 flex items-center gap-6 rounded-b-3xl border-4 border-t-0 border-primary bg-neutral-200 px-8 py-6 sm:mx-auto md:p-6 xl:max-w-6xl">
         <div className="center grow md:grow-0">
           <img
             className="max-h-16"
