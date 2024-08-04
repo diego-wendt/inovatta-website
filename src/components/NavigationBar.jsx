@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { NavItems } from "../dados/Dados";
 
 export const NavigationBar = () => {
@@ -5,12 +6,17 @@ export const NavigationBar = () => {
     <ul className="hidden grow justify-end gap-3 px-3 text-center md:flex">
       {NavItems.map((item, index) => {
         return (
-          <li
+          <NavLink
             key={index}
-            className="rounded-lg p-2 text-base font-semibold text-gray-900 hover:bg-primary hover:text-neutral-100"
+            className={({ isActive }) => {
+              return isActive
+                ? "rounded-lg bg-primary p-2 text-base font-semibold text-neutral-100"
+                : "rounded-lg p-2 text-base font-semibold text-gray-900 hover:bg-primary hover:text-neutral-100";
+            }}
+            to={item.href}
           >
-            <a href={item.href}>{item.label}</a>
-          </li>
+            <li>{item.label}</li>
+          </NavLink>
         );
       })}
     </ul>
